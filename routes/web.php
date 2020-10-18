@@ -23,3 +23,13 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 Route::get('/class', [ClassGroupController::class, 'index']);
+
+//Test-Albert:
+Route::get('/test', function(){
+
+    //return 'Hello World';
+    //return ['foo' => 'bar'];
+    //return view('test');
+    $name = request('name');
+    return $name;
+});
